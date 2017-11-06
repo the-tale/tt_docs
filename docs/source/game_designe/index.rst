@@ -9,5 +9,6 @@
    :maxdepth: 2
    :caption: Содержание
 
+   races
    characters/index
    map_requirements

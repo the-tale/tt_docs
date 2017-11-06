@@ -86,9 +86,18 @@ Tёмная тема The Tale
 
 
 Статистика гильдий
--------------------------
+------------------
 
 :URL: http://ttgs.herokuapp.com/
 :Репозиторий: —
 :Тема на форуме: http://the-tale.org/forum/threads/2305
 :Автор: `Kiberbit <http://the-tale.org/accounts/15199>`_
+
+
+Книга-игра "Простор" (текстовый квест)
+--------------------------------------
+
+:URL: http://somegoodstory.ucoz.ru/prostor.html
+:Репозиторий: —
+:Тема на форуме: http://the-tale.org/forum/threads/879
+:Автор: `Oatmeal Pecheneg <http://the-tale.org/accounts/677>`_
