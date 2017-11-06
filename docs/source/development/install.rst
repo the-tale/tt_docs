@@ -1,0 +1,157 @@
+
+Установка и запуск
+==================
+
+Стандартное окружение для игры.
+
+* Ubuntu
+* Postgres
+* RabbitMQ
+* Redis
+* Python + Django
+* Postfix
+* Nginx
+
+
+Установка (для разработки)
+**************************
+
+Окружение для разработки подымается в виртуалке с помощью Vargant. По умолчанию в виртуалке 4Gb RAM и 2 ядра процессора. Если этого много или мало, можно поправить в файле ``Vagrantfile``.
+
+.. code-block:: bash
+
+   mkdir ./the-tale-project
+   cd ./the-tale-project
+
+   git clone https://github.com/Tiendil/the-tale.git
+   git clone https://github.com/Tiendil/deworld.git
+   git clone https://github.com/Tiendil/dext.git
+   git clone https://github.com/Tiendil/pynames.git
+   git clone https://github.com/Tiendil/questgen.git
+   git clone https://github.com/Tiendil/rels.git
+   git clone https://github.com/Tiendil/utg.git
+
+   # при необходимости переключаем репозитории в ветки develop
+
+   # устанавливаем Virtualbox отсюда: https://www.virtualbox.org/wiki/Linux_Downloads
+   # устанавливаем Vagrant отсюда: https://www.vagrantup.com/downloads.html
+
+   # доставляем необходимые пакеты
+   sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+
+   cd ./the-tale/deploy/
+
+   sudo pip install ansible
+
+   ansible-galaxy install -r requirements.yml
+
+   vagrant plugin install vagrant-hostmanager
+
+   # создаём виртуальную машину, запускаем и устанавливаем на неё всё необходимое
+   # при первом запуске будет вызван vagrant provision
+   vagrant up
+
+   # для обновления софта на виртуальной машине
+   vagrant provision
+
+
+Нюансы конфигурации
+*******************
+
+Настройка форума проводится через админку Django.
+
+Права пользователей также настраиваются через админку Django.
+
+После настройки, в базе игры не будет фраз для лингвистики, вместо них будут отображаться заглушки, описывающие тип фразы и её параметры. Фразы необходимо добавлять руками.
+
+
+Запуск веб-сервера
+******************
+
+Запуск веб-сервера осуществляется в самой виртуалке
+
+.. code-block:: bash
+
+   # для захода в виртуалку выполняем из папки deploy
+   vagrant ssh
+
+   sudo su the_tale
+   cd ~/current
+   . ./venv/bin/activate
+
+   django-admin runserver 0.0.0.0:8000 --settings the_tale.settings
+
+
+Сайт игры будет доступен локально по адресу ``http://local.the-tale``
+
+
+Управление фоновыми рабочими
+****************************
+
+Перед запуском рабочих, необходимо запустить supervisor
+
+.. code-block:: bash
+
+   sudo systemctl start supervisor
+
+
+Конфигурация supervisor для запуска рабочих находится в файле ``/etc/supervisor/conf.d/the-tale.conf``
+
+Запуск рабочих осуществляется с помощью supervisor
+
+.. code-block:: bash
+
+   supervisorctl start all    # запустить все
+   supervisorctl start game   # запустить рабочих самой игры (логика игры)
+   supervisorctl start portal # запустить сервисных рабочих (регистрация, рассылки, платежи и так далее)
+
+
+Если есть проблемы с запуском (нет вывода после ввода команды или пишет, что процесс не найден),
+необходимо обновить конфигурацию виртуалки.
+
+Текущая конфигурация рабочих описана в файле ``./the_tale/amqp_environment.py``
+
+Каждый рабочий ведёт свой лог в каталоге ``/var/logs/the-tale/``
+
+**Внимание:** каждый процесс рабочего сейчас занимает около 70mb оперативной памяти, если запускаете всех, убедитесь, что на виртуальной машине достаточно памяти.
+
+
+Первый пользователь
+*******************
+
+Первый пользователь создаётся автоматически со следующими параметрами:
+
+:ник: superuser
+:почта: superuser@example.com
+:пароль: 111111
+
+
+*************
+Запуск тестов
+*************
+
+Для работы тестов необходимо запустить группу service: в супервизоре.
+
+.. code-block:: bash
+
+   sudo supervisorctl start service:
+
+
+Запуск всех тестов (работают долго!):
+
+.. code-block:: bash
+
+   sudo su the_tale
+   cd ~/current
+   source ./venv/bin/activate
+   django-admin dext_run_tests --settings the_tale.settings
+
+
+Запуск тестов конкретного приложения (для пример, the_tale.game.jobs):
+
+.. code-block:: bash
+
+   sudo su the_tale
+   cd ~/current
+   source ./venv/bin/activate
+   django-admin test --nomigrations the_tale.game.jobs.tests --settings the_tale.settings

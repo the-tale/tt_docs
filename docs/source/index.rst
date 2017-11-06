@@ -20,11 +20,3 @@
    game_designe/index
    3rd_party
    FAQ
-
-
-Перечни
-=======
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
