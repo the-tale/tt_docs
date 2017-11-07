@@ -6,5 +6,4 @@
    :caption: Содержание
 
    install
-   project
-   architecture
+   child_projects
