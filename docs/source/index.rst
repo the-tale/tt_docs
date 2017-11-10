@@ -7,6 +7,8 @@
 :Сайт игры: http://the-tale.org
 :Огранизациия: https://github.com/the-tale
 :Репозиторий: https://github.com/the-tale/the-tale
+:Форум: http://the-tale.org/forum/subcategories/28
+:Разработчики: :ref:`контакты <team>`
 
 
 .. toctree::
