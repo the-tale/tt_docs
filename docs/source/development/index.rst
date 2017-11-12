@@ -13,4 +13,5 @@
    development_process
    child_projects
    directions_of_development
+   architecture
    guides/index
