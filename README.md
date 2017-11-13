@@ -19,4 +19,17 @@
 Документация ведётся в формате [reStructuredText](https://ru.wikipedia.org/wiki/ReStructuredText) генерируется с помощью [Sphinx](http://www.sphinx-doc.org).
 
 [Документация по reStructuredText на английском](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
+
 [Документация по reStructuredText на русском](https://www.komtet.ru/lib/plangs/python/vvedenie-v-rst-formatirovanie)
+
+## Генерация документации
+
+```
+cd ./my-project/
+pip install -r requirements.txt
+
+cd ./docs
+make html
+
+your-browser ./build/html/index.html
+```
