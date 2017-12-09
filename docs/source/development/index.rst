@@ -14,4 +14,5 @@
    child_projects
    directions_of_development
    architecture
+   tt_services
    guides/index
