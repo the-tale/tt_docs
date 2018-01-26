@@ -126,9 +126,11 @@
 :пароль: 111111
 
 
-*************
 Запуск тестов
 *************
+
+Тесты игры
+----------
 
 Для работы тестов необходимо запустить группу service: в супервизоре.
 
@@ -155,3 +157,14 @@
    cd ~/current
    source ./venv/bin/activate
    django-admin test --nomigrations the_tale.game.jobs.tests --settings the_tale.settings
+
+
+Тесты сервисов
+--------------
+
+.. code-block:: bash
+
+   sudo su <пользователь сервиса>
+   cd ~/current
+   source ./venv/bin/activate
+   python -m unittest discover <основной python пакет сервиса>
