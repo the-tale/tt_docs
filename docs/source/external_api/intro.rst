@@ -4,7 +4,7 @@
 Принципы взаимодействия
 -----------------------
 
-Взаимодействие происходит по протоколу http.
+Взаимодействие происходит по протоколу HTTPS (все запросы по HTTP будут перенаправлены на аналогичный HTTPS адрес).
 
 Ответ возвращается в формате JSON.
 
@@ -12,13 +12,13 @@
 
 Для защиты от `CSRF <http://en.wikipedia.org/wiki/Cross-site_request_forgery">`_ (так как фунционал браузерной версии также построен на API), каждый POST запрос должен иметь cookie с именем csrftoken И либо POST параметр csrfmiddlewaretoken, либо заголовок X-CSRFToken, установленные в значение этой cookie. Значение для csrftoken cookie можно установить случайное (либо значение cookie будет установлено при 1-ом запросе к API).  Значение csrftoken должно быть строкой из 64 символов (0-9,a-z).
 
-Примеры запросов на логин с использованием curl:
+Примеры запросов на логин к локальному серверу с использованием curl:
 
 .. code-block:: bash
 
-    curl -b "sessionid=kwc2ngq02dilu56ti76nj21z18wzaghe; csrftoken=wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" -d "email=email@gmail.com&password=11111"  -H "X-CSRFToken: wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" "http://localhost:8000/accounts/auth/api/login?api_version=1.0&api_client=SASS-asas"
+    curl --insecure -b "sessionid=kwc2ngq02dilu56ti76nj21z18wzaghe; csrftoken=wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" -d "email=email@gmail.com&password=11111"  -H "X-CSRFToken: wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" "httpы://local.the-tale/accounts/auth/api/login?api_version=1.0&api_client=SASS-asas"
 
-    curl -b "sessionid=kwc2ngq02dilu56ti76nj21z18wzaghe; csrftoken=wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" -d "email=email@gmail.com&password=111111&csrfmiddlewaretoken=wxiefxk7i6kvUeyi4jU2xO0B96RwvJc" "http://localhost:8000/accounts/auth/api/login?api_version=1.0&api_client=SASS-asas"
+    curl --insecure -b "sessionid=kwc2ngq02dilu56ti76nj21z18wzaghe; csrftoken=wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" -d "email=email@gmail.com&password=111111&csrfmiddlewaretoken=wxiefxk7i6kvUeyi4jU2xO0B96RwvJc" "https://local.the-tale/accounts/auth/api/login?api_version=1.0&api_client=SASS-asas"
 
 
 Формат запроса
@@ -28,7 +28,7 @@
 
 .. code-block:: bash
 
-    the-tale.org/<адрес>?api_version=<версия>&api_client=<id клиента>&<параметры>
+    https://the-tale.org/<адрес>?api_version=<версия>&api_client=<id клиента>&<параметры>
 
 :адрес: путь к методу
 :версия: версия метода (в стандартном формате через точку: 1.0, 1.1 и etc.)

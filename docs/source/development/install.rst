@@ -82,7 +82,11 @@
    django-admin runserver 0.0.0.0:8000 --settings the_tale.settings
 
 
-Сайт игры будет доступен локально по адресу ``http://local.the-tale``
+Сайт игры будет доступен локально по адресу ``https://local.the-tale``
+
+.. warning::
+
+   В окружении разработчика используется `самоподписанный сертификат <https://en.wikipedia.org/wiki/Self-signed_certificate>`_, поэтому браузеры будут сообщать о «небезопасном соединении». Это нормально (для окружения разработчика). Если вы хотите избавиться от этого предупреждения, импортируйте сертификат к себе в систему. Он находится тут: ``<repository>/deploy/provisioning/files/nginx_certificates/local.the-tale/``.
 
 
 Управление фоновыми рабочими
