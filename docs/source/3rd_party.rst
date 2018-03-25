@@ -5,7 +5,7 @@
 
 Авторы этих проектов всегда будут рады вашей помощи.
 
-Обсуждение всех проектов игроков можно найти на `форуме игры <http://the-tale.org/forum/subcategories/43>`_.
+Обсуждение всех проектов игроков можно найти на `форуме игры <https://the-tale.org/forum/subcategories/43>`_.
 
 
 Android клиент для Сказки
@@ -15,8 +15,8 @@ Android клиент для Сказки
 
 :URL: `Google Play <https://play.google.com/store/apps/details?id=com.wrewolf.thetaleclient>`_
 :Репозиторий: `github <https://github.com/wrewolf/TheTaleClient>`__
-:Тема на форуме: http://the-tale.org/forum/threads/6029
-:Автор: `wrewolf <http://the-tale.org/accounts/27908>`_
+:Тема на форуме: https://the-tale.org/forum/threads/6029
+:Автор: `wrewolf <https://the-tale.org/accounts/27908>`_
 
 
 IOS клиент для Сказки
@@ -24,8 +24,8 @@ IOS клиент для Сказки
 
 :URL: `App Store <https://itunes.apple.com/ru/app/the-tale/id1265962932>`_
 :Репозиторий: `github <https://github.com/ntwf/TheTaleClient>`__
-:Тема на форуме: http://the-tale.org/forum/threads/6233
-:Автор: `ntwf <http://the-tale.org/accounts/60391>`_
+:Тема на форуме: https://the-tale.org/forum/threads/6233
+:Автор: `ntwf <https://the-tale.org/accounts/60391>`_
 
 
 Расширение для браузера «The Tale Extended»
@@ -40,8 +40,8 @@ IOS клиент для Сказки
 
 :URL: `Chrome <https://chrome.google.com/webstore/detail/the-tale-extended/hafakbhcckdligdjpghlofaplaajpaje>`_, `Firefox <https://greasyfork.org/scripts/4016-the-tale-extended>`_
 :Репозиторий: `github <https://github.com/standy/the-tale-ext/>`__
-:Тема на форуме: http://the-tale.org/forum/threads/1687
-:Автор: `standy <http://the-tale.org/accounts/9959>`_
+:Тема на форуме: https://the-tale.org/forum/threads/1687
+:Автор: `standy <https://the-tale.org/accounts/9959>`_
 
 
 Tёмная тема The Tale
@@ -49,8 +49,8 @@ Tёмная тема The Tale
 
 :URL: —
 :Репозиторий: —
-:Тема на форуме: http://the-tale.org/forum/threads/1407
-:Автор: `Experienced <http://the-tale.org/forum/threads/1407>`_
+:Тема на форуме: https://the-tale.org/forum/threads/1407
+:Автор: `Experienced <https://the-tale.org/forum/threads/1407>`_
 
 
 Телеграм канал: «Пандорийская Газета»
@@ -60,8 +60,8 @@ Tёмная тема The Tale
 
 :URL: https://t.me/talepp
 :Репозиторий: —
-:Тема на форуме: http://the-tale.org/forum/threads/6331
-:Автор: `Грустный Ворон <http://the-tale.org/accounts/8157>`_
+:Тема на форуме: https://the-tale.org/forum/threads/6331
+:Автор: `Грустный Ворон <https://the-tale.org/accounts/8157>`_
 
 Информер
 --------
@@ -70,8 +70,8 @@ Tёмная тема The Tale
 
 :URL: —
 :Репозиторий: —
-:Тема на форуме: http://the-tale.org/forum/threads/515
-:Автор: `Yashko <http://the-tale.org/accounts/2557>`_
+:Тема на форуме: https://the-tale.org/forum/threads/515
+:Автор: `Yashko <https://the-tale.org/accounts/2557>`_
 
 
 Альтернативный информер
@@ -81,8 +81,8 @@ Tёмная тема The Tale
 
 :URL: —
 :Репозиторий: —
-:Тема на форуме: http://the-tale.org/forum/threads/4422
-:Автор: `Нико д\`Лас <http://the-tale.org/accounts/6901>`_
+:Тема на форуме: https://the-tale.org/forum/threads/4422
+:Автор: `Нико д\`Лас <https://the-tale.org/accounts/6901>`_
 
 
 Статистика гильдий
@@ -90,8 +90,8 @@ Tёмная тема The Tale
 
 :URL: http://ttgs.herokuapp.com/
 :Репозиторий: —
-:Тема на форуме: http://the-tale.org/forum/threads/2305
-:Автор: `Kiberbit <http://the-tale.org/accounts/15199>`_
+:Тема на форуме: https://the-tale.org/forum/threads/2305
+:Автор: `Kiberbit <https://the-tale.org/accounts/15199>`_
 
 
 Книга-игра "Простор" (текстовый квест)
@@ -99,5 +99,5 @@ Tёмная тема The Tale
 
 :URL: http://somegoodstory.ucoz.ru/prostor.html
 :Репозиторий: —
-:Тема на форуме: http://the-tale.org/forum/threads/879
-:Автор: `Oatmeal Pecheneg <http://the-tale.org/accounts/677>`_
+:Тема на форуме: https://the-tale.org/forum/threads/879
+:Автор: `Oatmeal Pecheneg <https://the-tale.org/accounts/677>`_
