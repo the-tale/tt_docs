@@ -16,7 +16,7 @@
 
 .. code-block:: bash
 
-    curl --insecure -b "sessionid=kwc2ngq02dilu56ti76nj21z18wzaghe; csrftoken=wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" -d "email=email@gmail.com&password=11111"  -H "X-CSRFToken: wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" "httpы://local.the-tale/accounts/auth/api/login?api_version=1.0&api_client=SASS-asas"
+    curl --insecure -b "sessionid=kwc2ngq02dilu56ti76nj21z18wzaghe; csrftoken=wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" -d "email=email@gmail.com&password=11111"  -H "X-CSRFToken: wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" "https://local.the-tale/accounts/auth/api/login?api_version=1.0&api_client=SASS-asas"
 
     curl --insecure -b "sessionid=kwc2ngq02dilu56ti76nj21z18wzaghe; csrftoken=wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" -d "email=email@gmail.com&password=111111&csrfmiddlewaretoken=wxiefxk7i6kvUeyi4jU2xO0B96RwvJc" "https://local.the-tale/accounts/auth/api/login?api_version=1.0&api_client=SASS-asas"
 
