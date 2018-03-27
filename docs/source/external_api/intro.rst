@@ -10,15 +10,19 @@
 
 Сессии реализуются через передачу cookie с именем sessionid; в случае, если в запросе cookie не указана, сервер создаст новую сессию и вернёт соответствующее значение cookie.
 
-Для защиты от `CSRF <http://en.wikipedia.org/wiki/Cross-site_request_forgery">`_ (так как фунционал браузерной версии также построен на API), каждый POST запрос должен иметь cookie с именем csrftoken И либо POST параметр csrfmiddlewaretoken, либо заголовок X-CSRFToken, установленные в значение этой cookie. Значение для csrftoken cookie можно установить случайное (либо значение cookie будет установлено при 1-ом запросе к API).  Значение csrftoken должно быть строкой из 64 символов (0-9,a-z).
+.. note::
+
+   Для защиты от `CSRF <http://en.wikipedia.org/wiki/Cross-site_request_forgery">`_ (так как фунционал браузерной версии также построен на API), каждый POST запрос должен иметь cookie с именем csrftoken И либо POST параметр csrfmiddlewaretoken, либо заголовок X-CSRFToken, установленные в значение этой cookie. Значение для csrftoken cookie можно установить случайное (либо значение cookie будет установлено при 1-ом запросе к API).  Значение csrftoken должно быть строкой из 64 символов (0-9,a-z).
+
+   Кроме того, необходимо передавать заголовок `Referer: https://the-tale.org/`.
 
 Примеры запросов на логин к локальному серверу с использованием curl:
 
 .. code-block:: bash
 
-    curl --insecure -b "sessionid=kwc2ngq02dilu56ti76nj21z18wzaghe; csrftoken=wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" -d "email=email@gmail.com&password=11111"  -H "X-CSRFToken: wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" "httpы://local.the-tale/accounts/auth/api/login?api_version=1.0&api_client=SASS-asas"
+    curl --insecure --referer "https://the-tale.org/" -b "sessionid=kwc2ngq02dilu56ti76nj21z18wzaghe; csrftoken=wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" -d "email=email@gmail.com&password=11111"  -H "X-CSRFToken: wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" "https://local.the-tale/accounts/auth/api/login?api_version=1.0&api_client=SASS-asas"
 
-    curl --insecure -b "sessionid=kwc2ngq02dilu56ti76nj21z18wzaghe; csrftoken=wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" -d "email=email@gmail.com&password=111111&csrfmiddlewaretoken=wxiefxk7i6kvUeyi4jU2xO0B96RwvJc" "https://local.the-tale/accounts/auth/api/login?api_version=1.0&api_client=SASS-asas"
+    curl --insecure --referer "https://the-tale.org/" -b "sessionid=kwc2ngq02dilu56ti76nj21z18wzaghe; csrftoken=wxiefxk7i6kvkUeyi4jU2xO0B96RwvJc" -d "email=email@gmail.com&password=111111&csrfmiddlewaretoken=wxiefxk7i6kvUeyi4jU2xO0B96RwvJc" "https://local.the-tale/accounts/auth/api/login?api_version=1.0&api_client=SASS-asas"
 
 
 Формат запроса
