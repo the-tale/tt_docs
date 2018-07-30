@@ -26,10 +26,7 @@
    git clone https://github.com/Tiendil/the-tale.git
    git clone https://github.com/Tiendil/deworld.git
    git clone https://github.com/Tiendil/dext.git
-   git clone https://github.com/Tiendil/pynames.git
    git clone https://github.com/Tiendil/questgen.git
-   git clone https://github.com/Tiendil/rels.git
-   git clone https://github.com/Tiendil/utg.git
 
    # при необходимости переключаем репозитории в ветки develop
 
@@ -53,6 +50,21 @@
 
    # для обновления софта на виртуальной машине
    vagrant provision
+
+
+Опциональные репозитории
+************************
+
+Часть проектов, родившихся в рамках разработки, доросли до стабильной версии и хостятся на `pypi.org`_.
+
+Если необходимо делать правки в них (например, добавить новую функциональность), их следует клонировать по аналогии с обязательными репозиториями и вручную поставить из исходников в виртуальной машине.
+
+Репозитории:
+
+- генератор имён персонажей: https://github.com/Tiendil/pynames.git
+- продвинутые перечисления: https://github.com/Tiendil/rels.git
+- генератор текста: https://github.com/Tiendil/utg.git
+- умные импорты для Python: https://github.com/Tiendil/smart-imports.git
 
 
 Нюансы конфигурации

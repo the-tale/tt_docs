@@ -7,12 +7,21 @@
 Все проекты небольшие и имеют чётко выделенную функциональность. По каждому из них есть интересные задачи.
 
 
+smart_imports — умные импорты для Python
+----------------------------------------
+
+Smart imports, анализируя код на Python, определяют что куда и под каким именем необходимо импортировать (и импортируют). Позволяют избавиться от длинных списков импортов и навести порядок в именах.
+
+:pypi: https://pypi.org/project/smart_imports/
+:github: https://github.com/Tiendil/smart-imports
+
+
 pynames — генератор имён
 ------------------------
 
 Генератор имён персонажей. Может создавать имена на русском и английском. На русском выдаёт все формы имени.
 
-:pypi: https://pypi.python.org/pypi/Pynames
+:pypi: https://pypi.org/project/Pynames/
 :github: https://github.com/the-tale/pynames
 
 
@@ -21,7 +30,7 @@ utg — генератор русского текста
 
 Шаблонный генератор русского текста с учётом зависимостей слов и их форм. Используется для генерации всего текста в игре.
 
-:pypi: https://pypi.python.org/pypi/UTG
+:pypi: https://pypi.org/project/UTG/
 :github: https://github.com/the-tale/utg
 
 
