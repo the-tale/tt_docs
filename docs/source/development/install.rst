@@ -96,7 +96,8 @@
 
 .. code-block:: bash
 
-   sudo systemctl start supervisor
+   sudo su
+   systemctl start supervisor
 
 
 Конфигурация supervisor для запуска рабочих находится в файле ``/etc/supervisor/conf.d/the-tale.conf``
