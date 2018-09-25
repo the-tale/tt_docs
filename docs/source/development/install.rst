@@ -107,6 +107,7 @@
 Перед запуском рабочих, необходимо запустить supervisor
 
 .. code-block:: bash
+ 
    sudo su
    systemctl start supervisor
 
