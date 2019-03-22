@@ -27,14 +27,16 @@
    git clone https://github.com/Tiendil/deworld.git
    git clone https://github.com/Tiendil/dext.git
    git clone https://github.com/Tiendil/questgen.git
+   git clone https://github.com/Tiendil/rels.git
 
    # при необходимости переключаем репозитории в ветки develop
 
    # устанавливаем Virtualbox отсюда: https://www.virtualbox.org/wiki/Linux_Downloads
+   # возможно понадобится перезагрузка машины для загрузки ядром модуля virtualbox
    # устанавливаем Vagrant отсюда: https://www.vagrantup.com/downloads.html
 
    # доставляем необходимые пакеты
-   sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+   sudo apt-get install build-essential libssl-dev libffi-dev python-dev ruby
 
    cd ./the-tale/deploy/
 
@@ -73,6 +75,8 @@
 Настройка форума проводится через админку Django.
 
 Права пользователей также настраиваются через админку Django.
+
+Админка Django доступна по адресу ``https://local.the-tale/admin``
 
 После настройки, в базе игры не будет фраз для лингвистики, вместо них будут отображаться заглушки, описывающие тип фразы и её параметры. Фразы необходимо добавлять руками.
 
@@ -118,9 +122,10 @@
 
 .. code-block:: bash
 
-   supervisorctl start all    # запустить все
-   supervisorctl start game   # запустить рабочих самой игры (логика игры)
-   supervisorctl start portal # запустить сервисных рабочих (регистрация, рассылки, платежи и так далее)
+   supervisorctl start all      # запустить все
+   supervisorctl start game:    # запустить рабочих самой игры (логика игры)
+   supervisorctl start portal:  # запустить сервисных рабочих (регистрация, рассылки, платежи и так далее)
+   supervisorctl start service: # запустить остальных сервисов (рынок, личные сообщения, дневник героя, предметы игрока и так далее)
 
 
 Если есть проблемы с запуском (нет вывода после ввода команды или пишет, что процесс не найден),
