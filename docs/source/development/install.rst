@@ -27,7 +27,6 @@
    git clone https://github.com/Tiendil/deworld.git
    git clone https://github.com/Tiendil/dext.git
    git clone https://github.com/Tiendil/questgen.git
-   git clone https://github.com/Tiendil/rels.git
 
    # при необходимости переключаем репозитории в ветки develop
 
