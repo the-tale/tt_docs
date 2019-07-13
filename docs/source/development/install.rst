@@ -40,6 +40,8 @@
       git clone git@github.com:Tiendil/dext.git
       git clone git@github.com:the-tale/questgen.git
 
+.. code-block:: bash
+
    # при необходимости переключаем репозитории в ветки develop
 
    # устанавливаем Virtualbox отсюда: https://www.virtualbox.org/wiki/Linux_Downloads
