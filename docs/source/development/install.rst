@@ -23,10 +23,24 @@
    mkdir ./the-tale-project
    cd ./the-tale-project
 
-   git clone https://github.com/Tiendil/the-tale.git
-   git clone https://github.com/Tiendil/deworld.git
-   git clone https://github.com/Tiendil/dext.git
-   git clone https://github.com/Tiendil/questgen.git
+.. tabs::
+
+   .. code-tab:: Bash Clone with HTTPS
+
+      git clone https://github.com/Tiendil/the-tale.git
+      git clone https://github.com/Tiendil/deworld.git
+      git clone https://github.com/Tiendil/dext.git
+      git clone https://github.com/Tiendil/questgen.git
+
+
+   .. code-tab:: Bash Clone with SSH
+
+      git clone git@github.com:the-tale/the-tale.git
+      git clone git@github.com:the-tale/deworld.git
+      git clone git@github.com:Tiendil/dext.git
+      git clone git@github.com:the-tale/questgen.git
+
+.. code-block:: bash
 
    # при необходимости переключаем репозитории в ветки develop
 
