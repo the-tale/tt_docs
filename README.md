@@ -30,6 +30,9 @@ pip install -r requirements.txt
 
 cd ./docs
 make html
-
-your-browser ./build/html/index.html
 ```
+
+#### Откройте документацию в браузере
+GNU/linux ``` $ xdg-open ./build/html/index.html```  
+macOS ```$ open ./build/html/index.html```  
+Windows - откройте `./build/html/index.html` в вашем браузере
