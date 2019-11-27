@@ -58,6 +58,7 @@
    ansible-galaxy install -r requirements.yml
 
    vagrant plugin install vagrant-hostmanager
+   vagrant plugin install vagrant-disksize
 
    # создаём виртуальную машину, запускаем и устанавливаем на неё всё необходимое
    # при первом запуске будет вызван vagrant provision
