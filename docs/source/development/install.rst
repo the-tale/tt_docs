@@ -29,7 +29,6 @@
 
       git clone https://github.com/Tiendil/the-tale.git
       git clone https://github.com/Tiendil/deworld.git
-      git clone https://github.com/Tiendil/dext.git
       git clone https://github.com/Tiendil/questgen.git
 
 
@@ -37,7 +36,6 @@
 
       git clone git@github.com:the-tale/the-tale.git
       git clone git@github.com:the-tale/deworld.git
-      git clone git@github.com:Tiendil/dext.git
       git clone git@github.com:the-tale/questgen.git
 
 .. code-block:: bash
@@ -182,7 +180,7 @@
    sudo su the_tale
    cd ~/current
    source ./venv/bin/activate
-   django-admin dext_run_tests --settings the_tale.settings
+   django-admin utils_run_tests --settings the_tale.settings
 
 
 Запуск тестов конкретного приложения (для пример, the_tale.game.jobs):
