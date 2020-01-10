@@ -60,6 +60,13 @@
 
    # создаём виртуальную машину, запускаем и устанавливаем на неё всё необходимое
    # при первом запуске будет вызван vagrant provision
+
+   # если при запуске vagrant up вы получите следующую ошибку:
+   # A host only network interface you're attempting to configure via DHCP
+   # попробуйте выполнить VBoxManage dhcpserver remove --netname HostInterfaceNetworking-vboxnet0
+   # и повторить запуск
+   # ВНИМАНИЕ, вызов VBoxManage может сломать настройки сети в virtualbox (если вы их уже делали)
+
    vagrant up
 
    # для обновления софта на виртуальной машине
