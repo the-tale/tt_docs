@@ -1,4 +1,4 @@
-sphinx==1.6.5
+sphinx==2.4.1
 sphinx-autobuild==0.7.1
-sphinx-rtd-theme==0.2.4
-sphinx-tabs==1.1.11
+sphinx-rtd-theme==0.4.3
+sphinx-tabs==1.1.13
