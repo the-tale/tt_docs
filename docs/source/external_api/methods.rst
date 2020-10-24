@@ -977,7 +977,7 @@ PvP: Отправить героя на арену
 
 Отправить заявку на бой на арене.
 
-:адрес: /game/pvp/api/api-call-to-arena
+:адрес: /game/pvp/api/call-to-arena
 :http-метод: POST
 :версии: 0.1
 :параметры: нет
@@ -1009,7 +1009,7 @@ PvP: Отозвать героя с арены
 
 Отозвать заявку на бой на арене.
 
-:адрес: /game/pvp/api/api-leave-arena
+:адрес: /game/pvp/api/leave-arena
 :http-метод: POST
 :версии: 0.1
 :параметры: нет
@@ -1029,7 +1029,7 @@ PvP: Принять вызов другого игрока
 
 Принять вызов другого игрока.
 
-:адрес: /game/pvp/api/api-accept-arena-battle
+:адрес: /game/pvp/api/accept-arena-battle
 :http-метод: POST
 :версии: 0.1
 :параметры:
@@ -1046,7 +1046,7 @@ PvP: Начать бой с ботом
 
 Начинает бой с ботом, если есть свбодные боты.
 
-:адрес: /game/pvp/api/api-create-arena-bot-battle
+:адрес: /game/pvp/api/create-arena-bot-battle
 :http-метод: POST
 :версии: 0.1
 :параметры: нет
@@ -1060,7 +1060,7 @@ PvP: получить информацию о pvp боях и вызовах
 
 Возвращает информацию о текущих вызовах и боях.
 
-:адрес: /game/pvp/api/api-info
+:адрес: /game/pvp/api/info
 :http-метод: GET
 :версии: 0.1
 :параметры: нет
