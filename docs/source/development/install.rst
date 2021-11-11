@@ -63,7 +63,7 @@
    ./bin/docker_compose.sh build tt_base
 
    # Собираем контейнеры. Может занять некоторое время.
-   ./bin/docker_compose.sh --profile services --profile workers build
+   ./bin/docker_compose.sh --profile services --profile utils --profile workers --profile site build
 
    ####################################################
    # Производим первоначальную настройку состояния игры
@@ -74,24 +74,24 @@
    # При первом вызове логики игры мы устанавливаем большой таймаут,
    # чтобы дать время PostgreSQL создать все необходимые базы.
 
-   TT_WAIT_TIMEOUT=60 ./bin/docker_compose.sh run site_utils tt_django migrate
+   TT_WAIT_TIMEOUT=60 ./bin/docker_compose.sh run utils_site tt_django migrate
 
    # Запускаем новые фоновые сервисы, они нужны для следующих команд.
    ./bin/docker_compose.sh --profile services up -d
 
    # Создаём мир игры.
-   ./bin/docker_compose.sh run site_utils tt_django game_create_world
+   ./bin/docker_compose.sh run utils_site tt_django game_create_world
 
    # Создаём суперпользователя с параметрами по-умолчанию.
    # ПОМЕНЯЙТЕ ИХ, если планируете давать доступ к игре другим людям.
    # - ник: superuser
    # - почта: superuser@example.com
    # - пароль: 111111
-   ./bin/docker_compose.sh run site_utils tt_django accounts_create_superuser
+   ./bin/docker_compose.sh run utils_site tt_django accounts_create_superuser
 
    # Настраиваем прочие параметры игры.
    # Эту команду следует выполнять после каждого обновления игры на новую версию.
-   ./bin/docker_compose.sh run site_utils tt_django portal_postupdate_operations
+   ./bin/docker_compose.sh run utils_site tt_django portal_postupdate_operations
 
 
 Запуск игры
@@ -105,7 +105,7 @@
    # Запускаем сайт.
    ./bin/docker_compose.sh up -d site
 
-   # Теперь игра должна быть доступна по адресу ``localhost``.
+   # Теперь игра должна быть доступна по адресу "localhost".
 
    # Остановим все сервисы можно следующей командой.
    # ./bin/docker_compose.sh down
@@ -223,7 +223,7 @@ Docker Compose
    ./bin/docker_compose.sh down
    ./bin/docker_compose.sh --profile services up -d
 
-   ./bin/docker_compose.sh run site_utils tt_django utils_run_tests
+   ./bin/docker_compose.sh run utils_site tt_django utils_run_tests
 
 
 .. warning::
