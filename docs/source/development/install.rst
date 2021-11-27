@@ -68,33 +68,14 @@
    # Файл settings_local.py добавлен в .gitignore и не сохраняется в репозиторий.
    echo "DEBUG = True" > ./src/the_tale/the_tale/settings_local.py
 
-   # Запускаем сервисы инфраструктуры
-   ./bin/docker_compose.sh up -d
+   # подготовливаем игру к запуску
+   ./bin/before_first_start.sh
 
-   # Создаём необходимые базы данных
-   ./bin/docker_compose.sh run utils-postgresql db_init.sh
-
-   # Запускаеми миграции БД для основной базы.
-   # Миграции баз новых сервисов накатываются во время запуска сервисов.
-   ./bin/docker_compose.sh run utils-site tt_django migrate
-
-   # Запускаем новые фоновые сервисы, они нужны для следующих команд.
-   ./bin/docker_compose.sh --profile services up -d
-
-   # Создаём мир игры.
-   ./bin/docker_compose.sh run utils-site tt_django game_create_world
-
-   # Создаём суперпользователя с параметрами по-умолчанию.
+   # В том числе команда создаём суперпользователя с параметрами по-умолчанию.
    # ПОМЕНЯЙТЕ ИХ, если планируете давать доступ к игре другим людям.
    # - ник: superuser
    # - почта: superuser@example.com
    # - пароль: 111111
-   ./bin/docker_compose.sh run utils-site tt_django accounts_create_superuser
-
-   # Настраиваем прочие параметры игры.
-   # Эту команду следует выполнять после каждого обновления игры на новую версию.
-   ./bin/docker_compose.sh run utils-site tt_django portal_postupdate_operations
-
 
 Запуск игры
 ***********
