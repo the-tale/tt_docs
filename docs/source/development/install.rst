@@ -26,6 +26,8 @@
 
 `Установите Docker и Docker Compose. <https://docs.docker.com/engine/install/>`_
 
+Стоит отметить что проект использует Compose V2, больше об этом `тут. <https://docs.docker.com/compose/migrate/#what-are-the-differences-between-compose-v1-and-compose-v2>`_
+
 .. tabs::
 
    .. code-tab:: Bash Clone with HTTPS
