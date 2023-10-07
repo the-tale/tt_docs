@@ -8,7 +8,7 @@
 
 Инструкция проверялась под Ubuntu, должна работать для любого популярного linux дистрибутива.
 
-Инструкция должна работать для Windows под `WSL <https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux>`_ — Windows Subsystem for Linux, но не проверялась.
+Инструкция работает и для Windows под `WSL <https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux>`_ — Windows Subsystem for Linux.
 
 **Мы с радостью примем pull requests с уточнениями как документации, так и кода.**
 
